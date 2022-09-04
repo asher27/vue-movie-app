@@ -1,2 +1,12 @@
 [build]
-  functions = "functions"
+command = "npm run build"
+functions = "functions"
+publish = "dist"
+
+[dev]
+framework = "#custom"
+command = "npm run dev:webpack" # 연결할 프로젝트의 개발 서버를 실행하는 명령
+targetPort = 8079 # 연결할 프로젝트 개발 서버의 포트
+port = 8080       # 출력할 Netlift 서버의 포트를 지정
+publish = "dist"
+autoLaunch = false
